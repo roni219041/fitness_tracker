@@ -1,5 +1,12 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
 
 /FitnessTracker/obj/Debug/net5.0
+/.vs/FitnessTracker/v16
+/FitnessTracker/bin/Debug/net5.0
+/FitnessTracker/obj
