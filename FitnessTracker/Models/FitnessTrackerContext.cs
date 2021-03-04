@@ -97,6 +97,8 @@ namespace FitnessTracker.Models
                     .HasMaxLength(150);
             });
 
+            modelBuilder.Entity<User>().HasIndex(u => u.Username).IsUnique();
+
             OnModelCreatingPartial(modelBuilder);
         }
 
