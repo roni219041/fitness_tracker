@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj": {}
+    "C:\\Veronika\\IT career\\Fitness2\\FitnessTracker\\FitnessTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj": {
+    "C:\\Veronika\\IT career\\Fitness2\\FitnessTracker\\FitnessTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj",
+        "projectUniqueName": "C:\\Veronika\\IT career\\Fitness2\\FitnessTracker\\FitnessTracker.csproj",
         "projectName": "FitnessTracker",
-        "projectPath": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj",
-        "packagesPath": "C:\\Users\\miran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\obj\\",
+        "projectPath": "C:\\Veronika\\IT career\\Fitness2\\FitnessTracker\\FitnessTracker.csproj",
+        "packagesPath": "C:\\Users\\Veronika\\.nuget\\packages\\",
+        "outputPath": "C:\\Veronika\\IT career\\Fitness2\\FitnessTracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\miran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Veronika\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,6 +59,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Napa.DocuSign.eSign.dll": {
+              "target": "Package",
+              "version": "[1.0.9, )"
             }
           },
           "imports": [
@@ -79,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
