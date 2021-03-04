@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using FitnessTracker.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitnessTracker
 {
@@ -28,6 +30,8 @@ namespace FitnessTracker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<FitnessTrackerContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddDbContext<FitnessTrackerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

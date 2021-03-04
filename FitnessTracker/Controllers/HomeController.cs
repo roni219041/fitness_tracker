@@ -12,10 +12,11 @@ namespace FitnessTracker.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        protected FitnessTrackerContext _context;
+        public HomeController(FitnessTrackerContext context, ILogger<HomeController> logger)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -25,7 +26,8 @@ namespace FitnessTracker.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            IEnumerable<BodyPart> bodyParts = _context.BodyParts;
+            return View(bodyParts);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
