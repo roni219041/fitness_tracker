@@ -1,33 +1,24 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
 <h1>Register</h1>
 <div>
-    <form>
+    <form asp-action="CreateUser">
         <br />
         <br />
         <br />
         <h4 align=center>Create User</h4>
         <label for="First Name"></label>
-        <input type="text" name="First name" placeholder="First name..." class=" form-control" />
+        <input type="text" name="FirstName" placeholder="First name..." class=" form-control" />
         <label for="Last Name"></label>
-        <input type="text" name="Last name" placeholder="Last name..." class=" form-control" />
+        <input type="text" name="LastName" placeholder="Last name..." class=" form-control" />
         <label for="Age"></label>
-        <select>
-            <input type="number" min="1" max="100" name="Age" placeholder="Your age..." class=" form-control" />
-        </select>
+        <input type="number" min="1" max="120" name="Age" placeholder="Age..." class=" form-control" />
         <label for="Weight"></label>
-        <select>
-            <input type="number" min="1" max="1000" name="Weight" placeholder="Your weight in kg..." class=" form-control" />
-        </select>
+        <input type="number" min="1" max="1000" name="Weight" placeholder="Your weight in cm..." class=" form-control" />
         <label for="Height"></label>
-        <select>
-            <input type="number" min="1" max="300" name="Height" placeholder="Your height in cm..." class=" form-control" />
-        </select>
-        <div>
-
-        </div>
+        <input type="number" min="1" max="300" name="Height" placeholder="Your height in cm..." class=" form-control" />
+        <button type="submit" class=" btn btn-primary">Register</button>
     </form>
 </div>

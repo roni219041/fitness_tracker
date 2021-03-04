@@ -21,11 +21,10 @@ namespace FitnessTracker.Controllers
         }
         public IActionResult CreateUser(Models.User user)
         {
-            user.Id = user.Id + 1;
             _db.Users.Add(user);
             _db.SaveChanges();
 
-            return RedirectToAction("Register", "Index");
+            return RedirectToAction("Index", "Register");
         }
     }
 }
