@@ -19,5 +19,10 @@ namespace FitnessTracker.Controllers
         {
             return View();
         }
+        public IActionResult LogIn()
+        {
+            
+            return RedirectToAction("Index", "LogIn");
+        }
     }
 }

@@ -8,17 +8,47 @@
         <br />
         <br />
         <br />
-        <h4 align=center>Create User</h4>
+        <h4 align=left>Sign up</h4> 
+        <!--Create a form with containers for every column of the User table -->
         <label for="First Name"></label>
-        <input type="text" name="FirstName" placeholder="First name..." class=" form-control" />
+        <input type="text" name="FirstName" 
+               style="width: 50%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="First name..." 
+               class=" form-control" /> 
         <label for="Last Name"></label>
-        <input type="text" name="LastName" placeholder="Last name..." class=" form-control" />
+        <input type="text" name="LastName" 
+               style="width: 50%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Last name..." 
+               class=" form-control" />
         <label for="Age"></label>
-        <input type="number" min="1" max="120" name="Age" placeholder="Age..." class=" form-control" />
+        <input type="number" min="1" max="120" name="Age" 
+               style="width: 50%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Age..."
+               class=" form-control" />
         <label for="Weight"></label>
-        <input type="number" min="1" max="1000" name="Weight" placeholder="Your weight in cm..." class=" form-control" />
+        <input type="number" min="1" max="1000" name="Weight" 
+               style="width: 50%;border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Your weight in kg..." 
+               class=" form-control" />
         <label for="Height"></label>
-        <input type="number" min="1" max="300" name="Height" placeholder="Your height in cm..." class=" form-control" />
-        <button type="submit" class=" btn btn-primary">Register</button>
+        <input type="number" min="1" max="300" name="Height" 
+               style="width:50%;border-color: black;border-radius:25px;border-width:1.5px" placeholder="Your height in cm..." 
+               class=" form-control" />
+        <label for="Username"></label>
+        <input type="text" name="Username" 
+               style="width:50%;border-color: black;border-radius:25px;border-width:1.5px" placeholder="Username..." 
+               class=" form-control" />
+        <label for="Password"></label>
+        <input type="password" id="Password" inputmode="text" name="Password" 
+               style="width:50%;border-color: black;border-radius:25px;border-width:1.5px" placeholder="Password..." class=" form-control" />
+        <br />
+        <br />
+        <br />
+        <!--Create a register button, which redirects to the log in page-->
+        <p align="center">
+            <button type="submit"
+                    style="padding:14px 40px;border-radius: 20px; background-color: black; color: beige; font-weight: bold;font-size:19px"
+                    class="btn btn-primary">
+                Register
+            </button>
+        </p>
+        <!--Insert a background image -->
+        <img src="" />
     </form>
 </div>

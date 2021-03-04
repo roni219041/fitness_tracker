@@ -1,5 +1,4 @@
-﻿using DocuSign.eSign.Model;
-using FitnessTracker.Models;
+﻿using FitnessTracker.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
