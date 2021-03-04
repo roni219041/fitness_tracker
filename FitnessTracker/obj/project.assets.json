@@ -6376,19 +6376,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miran\\.nuget\\packages\\": {}
+    "C:\\Users\\Vasil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj",
+      "projectUniqueName": "C:\\Users\\Vasil\\Desktop\\FitnessTracker1\\FitnessTracker\\FitnessTracker.csproj",
       "projectName": "FitnessTracker",
-      "projectPath": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\FitnessTracker.csproj",
-      "packagesPath": "C:\\Users\\miran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miran\\Desktop\\FitnessTracker\\FitnessTracker\\obj\\",
+      "projectPath": "C:\\Users\\Vasil\\Desktop\\FitnessTracker1\\FitnessTracker\\FitnessTracker.csproj",
+      "packagesPath": "C:\\Users\\Vasil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vasil\\Desktop\\FitnessTracker1\\FitnessTracker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\miran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6453,7 +6453,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
