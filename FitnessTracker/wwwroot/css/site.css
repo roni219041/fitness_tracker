@@ -102,3 +102,10 @@ html,body {
     height: 100%;
     width: 100%;
 }
+
+.form-control, register-form {
+    width: 50%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1.5px;
+}
