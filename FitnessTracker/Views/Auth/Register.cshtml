@@ -1,10 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Register";
 }
 
 <h1>Register</h1>
 <div>
-    <form asp-action="CreateUser">
+    <form asp-controller="Auth" asp-action="CreateUser">
         <br />
         <br />
         <br />
@@ -44,5 +44,5 @@
         </p>
         <!--Insert a background image -->
     </form>
-    <img src="~/StaticFiles/images/gym-routine.jpg" style="border-width: 1.5px; border-color: beige"/>
+    @*<img src="~/StaticFiles/images/gym-routine.jpg" style="border-width: 1.5px; border-color: beige"/>*@
 </div>

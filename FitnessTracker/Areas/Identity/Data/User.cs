@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
 #nullable disable
 
 namespace FitnessTracker.Models
 {
-    public partial class User
+    public partial class User : IdentityUser
     {
         public User()
         {
@@ -27,12 +28,7 @@ namespace FitnessTracker.Models
 
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
         public int Height { get; set; }
-
-        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
-        public string Username { get; set; }
-
-        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
-        public string Password { get; set; }
+        
 
         public virtual ICollection<Excercise> Excercises { get; set; }
         public virtual ICollection<Food> Foods { get; set; }

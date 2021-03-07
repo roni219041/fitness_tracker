@@ -1,19 +1,20 @@
-﻿using FitnessTracker.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using FitnessTracker.Data;
+using FitnessTracker.Models;
 
 namespace FitnessTracker.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        protected FitnessTrackerContext _db;
-        public HomeController(FitnessTrackerContext context, ILogger<HomeController> logger)
+        protected FitnessTrackerDBContext _db;
+        public HomeController(FitnessTrackerDBContext context, ILogger<HomeController> logger)
         {
             _logger = logger;
             _db = context;
@@ -26,8 +27,8 @@ namespace FitnessTracker.Controllers
 
         public IActionResult Privacy()
         {
-            IEnumerable<BodyPart> bodyParts = _db.BodyParts;
-            return View(bodyParts);
+            
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
