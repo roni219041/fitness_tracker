@@ -1,21 +1,23 @@
-﻿using FitnessTracker.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using FitnessTracker.Data;
+using FitnessTracker.Models;
 
 namespace FitnessTracker.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        protected FitnessTrackerDBContext _db;
+        public HomeController(FitnessTrackerDBContext context, ILogger<HomeController> logger)
         {
             _logger = logger;
+            _db = context;
         }
 
         public IActionResult Index()
@@ -25,6 +27,7 @@ namespace FitnessTracker.Controllers
 
         public IActionResult Privacy()
         {
+            
             return View();
         }
 
