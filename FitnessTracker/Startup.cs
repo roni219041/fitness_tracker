@@ -30,8 +30,6 @@ namespace FitnessTracker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<FitnessTrackerContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<FitnessTrackerDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("FitnessTrackerDBContextConnection")));
             services.AddControllersWithViews();

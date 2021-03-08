@@ -4,14 +4,16 @@ using FitnessTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FitnessTracker.Migrations
 {
     [DbContext(typeof(FitnessTrackerDBContext))]
-    partial class FitnessTrackerDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210308132844_dataSeed1")]
+    partial class dataSeed1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,48 +34,6 @@ namespace FitnessTracker.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BodyParts");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Core"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Arms"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Back"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Chest"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Legs"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Shoulders"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Other"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Full Body"
-                        });
                 });
 
             modelBuilder.Entity("FitnessTracker.Models.Category", b =>
@@ -89,33 +49,6 @@ namespace FitnessTracker.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Cardio"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Dumbbell"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Bodyweight"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Barbell"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Machine/Other"
-                        });
                 });
 
             modelBuilder.Entity("FitnessTracker.Models.Excercise", b =>
