@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\StaticFiles\images\Building-a-Home-Gym.jpg" />
-    <None Include="wwwroot\StaticFiles\images\gym-routine.jpg" />
+    <None Include="wwwroot\images\Building-a-Home-Gym.jpg" />
+    <None Include="wwwroot\images\gym-routine.jpg" />
   </ItemGroup>
 
 </Project>

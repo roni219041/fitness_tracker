@@ -2,47 +2,49 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>Register</h1>
-<div>
-    <form asp-controller="Auth" asp-action="CreateUser">
+
+<div class="bg-img">
+    <form asp-action="CreateUser" class="container">
+        <h1>Register</h1>
         <br />
-        <br />
-        <br />
-        <h4 align=left>Sign up</h4>
-        <!--Create a form with containers for every column of the User table -->
-        <label for="First Name"></label>
-        <input type="text" name="FirstName"
-               placeholder="First name..." class=" form-control register-form" />
-        <label for="Last Name"></label>
-        <input type="text" name="LastName"
-               placeholder="Last name..." class=" form-control register-form" />
-        <label for="Age"></label>
-        <input type="number" min="1" max="120" name="Age"
-               placeholder="Age..." class=" form-control register-form" />
-        <label for="Weight"></label>
-        <input type="number" min="1" max="1000" name="Weight"
-               placeholder="Your weight in kg..." class=" form-control register-form" />
-        <label for="Height"></label>
-        <input type="number" min="1" max="300" name="Height"
-               placeholder="Your height in cm..." class=" form-control register-form" />
-        <label for="Username"></label>
-        <input type="text" name="Username"
-               placeholder="Username..." class=" form-control register-form" />
-        <label for="Password"></label>
-        <input type="password" id="Password" inputmode="text" name="Password"
-               placeholder="Password..." class=" form-control register-form" />
-        <br />
-        <br />
-        <br />
-        <!--Create a register button, which redirects to the LogIn page-->
-        <p align="center">
-            <button type="submit"
-                    style="padding:14px 40px;border-radius: 20px; background-color: black; color: beige; font-weight: bold;font-size:19px"
-                    class="btn btn-primary">
-                Register
-            </button>
-        </p>
-        <!--Insert a background image -->
+        <div class="row">
+            <div class="column">
+                <label for="First Name"><b>First name</b></label>
+                <input type="text" name="FirstName"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="First name..."
+                       class="form-control" required>
+
+                <label for="Last Name"><b>Last name</b></label>
+                <input type="text" name="LastName"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Last name..."
+                       class="form-control" required>
+
+                <label for="Age"><b>Age</b></label>
+                <input type="number" min="1" max="120" name="Age"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Age..."
+                       class="form-control" required>
+                <label for="Weight"><b>Weight</b></label>
+                <input type="number" min="1" max="1000" name="Weight"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Your weight in kg..."
+                       class="form-control" required>
+            </div>
+            <div class="column">              
+                <label for="Height"><b>Height</b></label>
+                <input type="number" min="1" max="300" name="Height"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Your height in cm..."
+                       class="form-control" required>
+
+                <label for="Username"><b>Username</b></label>
+                <input type="text" name="Username"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Username..."
+                       class="form-control" required>
+
+                <label for="Password"><b>Password</b></label>
+                <input type="password" name="Password"
+                       style="width: 75%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Password..."
+                       class="form-control" required>
+            </div>
+        </div>
+        <button type="submit" class="btn">Register</button>
     </form>
-    @*<img src="~/StaticFiles/images/gym-routine.jpg" style="border-width: 1.5px; border-color: beige"/>*@
 </div>
