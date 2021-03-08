@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -22,6 +23,7 @@ namespace FitnessTracker.Models
         public virtual DbSet<Excercise> Excercises { get; set; }
         public virtual DbSet<Food> Foods { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public IEnumerable<BodyPart> BodyPart { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

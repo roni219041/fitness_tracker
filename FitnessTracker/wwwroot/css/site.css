@@ -102,3 +102,142 @@ html,body {
     height: 100%;
     width: 100%;
 }
+$demo-blue: #005BA6;
+$demo-gray: #D6D6D6;
+$demo-placeholder: #C7C7C7;
+$demo-border: #E6E6E6;
+
+$border-width: 3px;
+
+// Select function
+@mixin form-input-select(){
+  @include _select-form-reset; 
+  color: $demo-blue;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  // padding: 11px 15px;
+  margin-top: 9px;
+  margin-bottom: 15px;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none;
+
+    border: 1px solid transparent; 
+    width: 0;
+    height: 0;
+    right: 16px;
+  }
+
+  
+  &::before {
+    bottom: 55%;
+    border-width: 0 6.5px 8px 6.5px;
+    border-bottom-color: $demo-gray;
+  }
+
+ 
+  &::after {
+    border-width: 8px 6.5px 0 6.5px;
+    border-top-color: $demo-gray;
+    top: 55%;
+  }
+  
+  
+  @-moz-document url-prefix() {
+    border-right: $border-width solid $demo-border;
+    
+    &:hover {
+      border-right: $border-width solid $demo-blue;
+    }
+  }
+
+  &:hover {
+
+    select {
+      box-shadow: 0 2px 3px rgba($demo-blue, 0.1) inset;
+      border-color: $demo-blue;
+
+     
+      &:focus {
+        outline-color: transparent;
+      }
+      
+    }
+
+    &::before {
+      border-bottom-color: $demo-blue;
+    }
+    &::after {
+      border-top-color: $demo-blue;
+    }
+
+  }
+
+  
+
+  select {
+    border: $border-width solid $demo-border;
+    border-radius: 0;
+    font-weight: 400;
+    color: inherit;
+    padding: 11px 15px;
+    line-height: normal;
+    transition: border-color 0.2s ease,
+                outline 0.2s ease;
+
+
+    
+    &:focus {
+      box-shadow: 0 3px 4px rgba($demo-blue, 0.3) inset;
+     
+      outline: $border-width solid $demo-blue;
+      outline-offset: -#{$border-width}; //offset vs width
+    }
+
+    &[disabled], &:disabled{
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+   
+    &:not(:focus):invalid {
+      color: $demo-placeholder;
+    }
+
+  }
+}
+
+
+[include*="form-input-select()"] {
+  @include form-input-select();
+}
+
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1em solid $demo-blue;
+  
+  div {
+    max-width: 16em;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

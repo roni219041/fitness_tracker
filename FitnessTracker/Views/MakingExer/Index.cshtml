@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Create an exercise</h1>
+
+<div>
+    
+    <form asp-action="CreateExercise">
+        <br />
+        <br />
+        <label for="Name"></label>
+        <input type="text" name="Name"
+               style="width: 40.7%; border-color: black; border-radius: 25px; border-width: 1.5px" placeholder="Name of the exercise..."
+               class=" form-control" />
+        
+        <p align="center">
+            <button type="submit"
+                    style="padding:14px 40px;border-radius: 20px; background-color: black; color: beige; font-weight: bold;font-size:19px"
+                    class="btn btn-primary">
+                Create
+            </button>
+        </p>
+    </form>
+</div>
+
+
