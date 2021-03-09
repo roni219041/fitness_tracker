@@ -4,11 +4,11 @@
 
 
 <div class="bg-img">
-    <form asp-controller="Auth" asp-action="Register" class="container">
+    <form asp-controller="Auth" asp-action="CreateUser" class="container registercontainer">
         <h1>Register</h1>
         <br />
-        <div class="row">
-            <div class="column">
+        <div class="formcontainer row">
+            <div class="formcontainer column">
                 <label for="First Name"><b>First name</b></label>
                 <input type="text" name="FirstName" placeholder="First name..."
                        class="form-control" required>
@@ -24,7 +24,7 @@
                 <input type="number" min="1" max="1000" name="Weight" placeholder="Your weight in kg..."
                        class="form-control" required>
             </div>
-            <div class="column">              
+            <div class="formcontainer column">              
                 <label for="Height"><b>Height</b></label>
                 <input type="number" min="1" max="300" name="Height" placeholder="Your height in cm..."
                        class="form-control" required>

@@ -117,7 +117,7 @@ html, body {
 }
 
 /* Add styles to the form container */
-.container {
+.registercontainer {
     position: absolute;
     left: 0;
     margin: 20px;
@@ -125,7 +125,7 @@ html, body {
     padding: 50px;
     background-color: white;
 }
-.column {
+.formcontainer.column {
     float: left;
     width: 50%;
 }
@@ -150,10 +150,10 @@ input[type=text], input[type=password], input[type=number] {
     border-width: 1.5px;
 }
 
-    input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
-        background-color: #ddd;
-        outline: none;
-    }
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+       background-color: #ddd;
+       outline: none;
+}
 
 /* Set a style for the submit button */
 .btn {
@@ -166,13 +166,11 @@ input[type=text], input[type=password], input[type=number] {
     opacity: 0.9;
 }
 
-    .btn:hover {
-        opacity: 1;
-    }
-body, html {
-    height: 100%;
-    width: 100%;
+.btn:hover {
+    opacity: 1;
 }
+
+/*
 * {
     box-sizing: border-box;
-}
+}*/
