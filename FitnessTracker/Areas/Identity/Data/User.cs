@@ -28,7 +28,9 @@ namespace FitnessTracker.Models
 
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
         public int Height { get; set; }
-        
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
+        public string Gender { get; set; }
+
 
         public virtual ICollection<Excercise> Excercises { get; set; }
         public virtual ICollection<Food> Foods { get; set; }

@@ -156,7 +156,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
 }
 
 /* Set a style for the submit button */
-.btn {
+.regBtn {
     background-color: black;
     color: white;
     padding: 14px 40px;
@@ -170,7 +170,79 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
     opacity: 1;
 }
 
-/*
-* {
-    box-sizing: border-box;
-}*/
+.mycols {
+    border: 5px;
+}
+
+
+/* Button Styles */
+
+.button.regbtn {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+/* First Button */
+
+#button-2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-2 a {
+    position: relative;
+    transition: all .35s ease-Out;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+
+#button-2:hover #slide {
+    left: 0;
+}
+
+#button-2:hover a {
+    color: #2D3142;
+}
+
+html, body {
+    height: 100%
+}
+
+.dashboard {
+    flex: auto;
+    padding-bottom: 2.5rem;
+}
+
+.mainFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
