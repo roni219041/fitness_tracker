@@ -22,7 +22,29 @@
             </div>
         </div>
         <div class="col-6 mycols border-left border-right">
-            <h1>INSIGHTS!!!</h1>
+            <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
+            <div>
+                <h3>Remaining Recommended Calories: @Model.RemainingCalories</h3>
+            </div>
+            <div class="activityLevel">
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories)" />
+                    Sedentary lifestyle
+                </label> <br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories)" checked />
+                    Usual
+                </label><br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories)" />
+                    Moderate Exercise
+                </label><br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories)" />
+                    Very active lifestyle
+                </label>
+            </div>
+            </div>
         </div>
         <div class="col-3 mycols">
             <h3>Workouts !!!</h3>

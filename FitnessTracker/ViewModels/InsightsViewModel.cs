@@ -9,11 +9,14 @@ namespace FitnessTracker.ViewModels
 {
     public class InsightsViewModel
     {
-        [Required] public string FirstName { get; set; }
-        [Required] public string LastName { get; set; }
-        [Required] public string Gender { get; set; }
-        [Required] public List<SelectListItem> PersonalFoods { get; set; }
+        [Required] public double? currentDailyCalories { get; set; }
 
-        //[Required] public double BMR = 
+        [Required] public double? RequiredCalories { get; set; }
+
+        [Required]
+        public double? RemainingCalories
+        {
+            get { return RequiredCalories - currentDailyCalories; }
+        }
     }
 }

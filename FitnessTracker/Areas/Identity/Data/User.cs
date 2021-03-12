@@ -12,9 +12,7 @@ namespace FitnessTracker.Models
             Excercises = new HashSet<Excercise>();
             Foods = new HashSet<Food>();
         }
-
-        public int Id { get; set; }
-        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
+        
         public string FirstName { get; set; }
 
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Required.")]
