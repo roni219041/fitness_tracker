@@ -20,6 +20,7 @@ namespace FitnessTracker.ViewModels
         [Required] public int Age { get; set; }
         [Required] public int Weight { get; set; }
         [Required] public int Height { get; set; }
+        [Required] public string Gender { get; set; }
 
     }
 }

@@ -1,8 +1,53 @@
-﻿
+﻿@model FitnessTracker.ViewModels.InsightsViewModel
 @{
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>GET BIG</h1>
-
+<div class="ml-4 mr-4 h-100">
+    <div class="row d-flex h-100">
+        <div class="col-2 mycols">
+            <h3 class="mb-5">Add activity</h3>
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <a href="#"><i class="fas fa-utensils"></i> Food</a>
+            </div>
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <a href="#"><i class="fas fa-dumbbell"></i> Exercise</a>
+            </div>
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <a href="#"><i class="fas fa-plus"> Workout</i></a>
+            </div>
+        </div>
+        <div class="col-6 mycols border-left border-right">
+            <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
+            <div>
+                <h3>Remaining Recommended Calories: @Model.RemainingCalories</h3>
+            </div>
+            <div class="activityLevel">
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories)" />
+                    Sedentary lifestyle
+                </label> <br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories)" checked />
+                    Usual
+                </label><br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories)" />
+                    Moderate Exercise
+                </label><br />
+                <label>
+                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories)" />
+                    Very active lifestyle
+                </label>
+            </div>
+            </div>
+        </div>
+        <div class="col-3 mycols">
+            <h3>Workouts !!!</h3>
+        </div>
+    </div>
+</div>

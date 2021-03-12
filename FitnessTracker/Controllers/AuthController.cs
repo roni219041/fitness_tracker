@@ -35,7 +35,8 @@ namespace FitnessTracker.Controllers
                 Age = userData.Age,
                 Weight = userData.Weight,
                 Height = userData.Height,
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                Gender = userData.Gender
             };
             var result = await userManager.CreateAsync(newUser, userData.Password);
 
@@ -81,6 +82,7 @@ namespace FitnessTracker.Controllers
             }
             //ToDo add incorrect data validation error messages in view
             return View("Login", model);
+            
         }
     }
 }        

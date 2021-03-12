@@ -4,14 +4,16 @@ using FitnessTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FitnessTracker.Migrations
 {
     [DbContext(typeof(FitnessTrackerDBContext))]
-    partial class FitnessTrackerDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210311022215_GenderFieldAdd")]
+    partial class GenderFieldAdd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,7 +136,10 @@ namespace FitnessTracker.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -143,7 +148,7 @@ namespace FitnessTracker.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Exercises");
                 });
@@ -161,9 +166,6 @@ namespace FitnessTracker.Migrations
                     b.Property<int>("Carbohydrates")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("Fat")
                         .HasColumnType("int");
 
@@ -173,12 +175,15 @@ namespace FitnessTracker.Migrations
                     b.Property<int>("Protein")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Foods");
 
@@ -188,7 +193,6 @@ namespace FitnessTracker.Migrations
                             Id = 1,
                             Calories = 119,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 3,
                             Name = "Boneless, Skinless Chicken Breast",
                             Protein = 23
@@ -198,7 +202,6 @@ namespace FitnessTracker.Migrations
                             Id = 2,
                             Calories = 81,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 1,
                             Name = "Tuna(water packed), can",
                             Protein = 18
@@ -208,7 +211,6 @@ namespace FitnessTracker.Migrations
                             Id = 3,
                             Calories = 78,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 2,
                             Name = "Salmon Filet",
                             Protein = 15
@@ -218,7 +220,6 @@ namespace FitnessTracker.Migrations
                             Id = 4,
                             Calories = 123,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 3,
                             Name = "Schrimp",
                             Protein = 24
@@ -228,7 +229,6 @@ namespace FitnessTracker.Migrations
                             Id = 5,
                             Calories = 121,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 4,
                             Name = "Extra Lean Ground Beef or Ground Round",
                             Protein = 24
@@ -238,7 +238,6 @@ namespace FitnessTracker.Migrations
                             Id = 6,
                             Calories = 69,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 5,
                             Name = "Egg",
                             Protein = 6
@@ -248,7 +247,6 @@ namespace FitnessTracker.Migrations
                             Id = 7,
                             Calories = 52,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Egg Whites",
                             Protein = 11
@@ -258,7 +256,6 @@ namespace FitnessTracker.Migrations
                             Id = 8,
                             Calories = 235,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 15,
                             Name = "Rib eye Steak",
                             Protein = 25
@@ -268,7 +265,6 @@ namespace FitnessTracker.Migrations
                             Id = 9,
                             Calories = 212,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 8,
                             Name = "Top round Steak",
                             Protein = 35
@@ -278,7 +274,6 @@ namespace FitnessTracker.Migrations
                             Id = 10,
                             Calories = 275,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 15,
                             Name = "Sirloin steak",
                             Protein = 35
@@ -288,7 +283,6 @@ namespace FitnessTracker.Migrations
                             Id = 11,
                             Calories = 200,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 8,
                             Name = "Filet Mignon",
                             Protein = 32
@@ -298,7 +292,6 @@ namespace FitnessTracker.Migrations
                             Id = 12,
                             Calories = 100,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 4,
                             Name = "NY Strip Steak",
                             Protein = 16
@@ -308,7 +301,6 @@ namespace FitnessTracker.Migrations
                             Id = 13,
                             Calories = 200,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 8,
                             Name = "Flank Steak(Stir Fry, Fajita)",
                             Protein = 32
@@ -318,7 +310,6 @@ namespace FitnessTracker.Migrations
                             Id = 14,
                             Calories = 146,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 6,
                             Name = "Pork Loin",
                             Protein = 23
@@ -328,7 +319,6 @@ namespace FitnessTracker.Migrations
                             Id = 15,
                             Calories = 122,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 2,
                             Name = "Ground turkey(Turkey Breast Slices or cutlets(fresh meat, not deli cuts)",
                             Protein = 26
@@ -338,7 +328,6 @@ namespace FitnessTracker.Migrations
                             Id = 16,
                             Calories = 100,
                             Carbohydrates = 23,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Sweet Potatoes, raw",
                             Protein = 2
@@ -348,7 +337,6 @@ namespace FitnessTracker.Migrations
                             Id = 17,
                             Calories = 272,
                             Carbohydrates = 62,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Quinoa",
                             Protein = 6
@@ -358,7 +346,6 @@ namespace FitnessTracker.Migrations
                             Id = 18,
                             Calories = 347,
                             Carbohydrates = 60,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 7,
                             Name = "Oats",
                             Protein = 11
@@ -368,7 +355,6 @@ namespace FitnessTracker.Migrations
                             Id = 19,
                             Calories = 459,
                             Carbohydrates = 96,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 3,
                             Name = "Old Fashioned Grifts",
                             Protein = 12
@@ -378,7 +364,6 @@ namespace FitnessTracker.Migrations
                             Id = 20,
                             Calories = 360,
                             Carbohydrates = 84,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "White Rice",
                             Protein = 6
@@ -388,7 +373,6 @@ namespace FitnessTracker.Migrations
                             Id = 21,
                             Calories = 88,
                             Carbohydrates = 20,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "White Potatoes, raw",
                             Protein = 2
@@ -398,7 +382,6 @@ namespace FitnessTracker.Migrations
                             Id = 22,
                             Calories = 12,
                             Carbohydrates = 2,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Lettuce",
                             Protein = 1
@@ -408,7 +391,6 @@ namespace FitnessTracker.Migrations
                             Id = 23,
                             Calories = 32,
                             Carbohydrates = 6,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Broccoli",
                             Protein = 2
@@ -418,7 +400,6 @@ namespace FitnessTracker.Migrations
                             Id = 24,
                             Calories = 24,
                             Carbohydrates = 4,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Asparagus",
                             Protein = 2
@@ -428,7 +409,6 @@ namespace FitnessTracker.Migrations
                             Id = 25,
                             Calories = 8,
                             Carbohydrates = 1,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Spinach",
                             Protein = 1
@@ -438,7 +418,6 @@ namespace FitnessTracker.Migrations
                             Id = 26,
                             Calories = 12,
                             Carbohydrates = 2,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Multi Colored Bell Peppers",
                             Protein = 1
@@ -448,7 +427,6 @@ namespace FitnessTracker.Migrations
                             Id = 27,
                             Calories = 20,
                             Carbohydrates = 4,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Brussels Sprouts",
                             Protein = 1
@@ -458,7 +436,6 @@ namespace FitnessTracker.Migrations
                             Id = 28,
                             Calories = 28,
                             Carbohydrates = 5,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Cauliflower",
                             Protein = 2
@@ -468,7 +445,6 @@ namespace FitnessTracker.Migrations
                             Id = 29,
                             Calories = 24,
                             Carbohydrates = 4,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Zucchini",
                             Protein = 2
@@ -478,7 +454,6 @@ namespace FitnessTracker.Migrations
                             Id = 30,
                             Calories = 20,
                             Carbohydrates = 4,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Cucumber",
                             Protein = 1
@@ -488,7 +463,6 @@ namespace FitnessTracker.Migrations
                             Id = 31,
                             Calories = 16,
                             Carbohydrates = 2,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Mushrooms",
                             Protein = 2
@@ -498,7 +472,6 @@ namespace FitnessTracker.Migrations
                             Id = 32,
                             Calories = 60,
                             Carbohydrates = 15,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Apple",
                             Protein = 0
@@ -508,7 +481,6 @@ namespace FitnessTracker.Migrations
                             Id = 33,
                             Calories = 112,
                             Carbohydrates = 27,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Banana",
                             Protein = 1
@@ -518,7 +490,6 @@ namespace FitnessTracker.Migrations
                             Id = 34,
                             Calories = 80,
                             Carbohydrates = 19,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Mango",
                             Protein = 1
@@ -528,7 +499,6 @@ namespace FitnessTracker.Migrations
                             Id = 35,
                             Calories = 72,
                             Carbohydrates = 16,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Navel orange",
                             Protein = 2
@@ -538,7 +508,6 @@ namespace FitnessTracker.Migrations
                             Id = 36,
                             Calories = 44,
                             Carbohydrates = 11,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Blueberries",
                             Protein = 0
@@ -548,7 +517,6 @@ namespace FitnessTracker.Migrations
                             Id = 37,
                             Calories = 40,
                             Carbohydrates = 9,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Strawberries",
                             Protein = 1
@@ -558,7 +526,6 @@ namespace FitnessTracker.Migrations
                             Id = 38,
                             Calories = 60,
                             Carbohydrates = 14,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 0,
                             Name = "Blackberries",
                             Protein = 1
@@ -568,7 +535,6 @@ namespace FitnessTracker.Migrations
                             Id = 39,
                             Calories = 704,
                             Carbohydrates = 28,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 56,
                             Name = "Almond Butter",
                             Protein = 22
@@ -578,7 +544,6 @@ namespace FitnessTracker.Migrations
                             Id = 40,
                             Calories = 1008,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 112,
                             Name = "Olive Oil",
                             Protein = 0
@@ -588,7 +553,6 @@ namespace FitnessTracker.Migrations
                             Id = 41,
                             Calories = 504,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 56,
                             Name = "Clarified or organic butter",
                             Protein = 0
@@ -598,7 +562,6 @@ namespace FitnessTracker.Migrations
                             Id = 42,
                             Calories = 1008,
                             Carbohydrates = 0,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 112,
                             Name = "Coconut oil",
                             Protein = 0
@@ -608,7 +571,6 @@ namespace FitnessTracker.Migrations
                             Id = 43,
                             Calories = 142,
                             Carbohydrates = 2,
-                            DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fat = 14,
                             Name = "Avocado",
                             Protein = 2
@@ -829,6 +791,7 @@ namespace FitnessTracker.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
@@ -860,7 +823,7 @@ namespace FitnessTracker.Migrations
 
                     b.HasOne("FitnessTracker.Models.User", "User")
                         .WithMany("Excercises")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Bodypart");
 
@@ -873,7 +836,7 @@ namespace FitnessTracker.Migrations
                 {
                     b.HasOne("FitnessTracker.Models.User", "User")
                         .WithMany("Foods")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("User");
                 });
