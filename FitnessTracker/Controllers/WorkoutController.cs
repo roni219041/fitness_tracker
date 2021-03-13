@@ -4,13 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FitnessTracker.Data;
 
 namespace FitnessTracker.Controllers
 {
     public class WorkoutController : Controller
     {
-        private readonly FitnessTrackerContext _db;
-        public WorkoutController(FitnessTrackerContext db)
+        private readonly FitnessTrackerDBContext _db;
+        public WorkoutController(FitnessTrackerDBContext db)
         {
             _db = db;
         }

@@ -200,7 +200,7 @@ a {
 }
 
 
-/* First Button */
+/* dashboard button */
 
 #button-2 {
     position: relative;
@@ -208,7 +208,7 @@ a {
     cursor: pointer;
 }
 
-#button-2 a {
+#button-2 div.innerText {
     position: relative;
     transition: all .35s ease-Out;
 }
@@ -227,7 +227,7 @@ a {
     left: 0;
 }
 
-#button-2:hover a {
+#button-2:hover div.innerText {
     color: #2D3142;
 }
 
