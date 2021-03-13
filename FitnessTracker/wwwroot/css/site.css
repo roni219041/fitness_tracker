@@ -328,3 +328,13 @@ html, body {
 .option-input.radio::after {
     border-radius: 50%;
 }
+/*The white box in Making Exe page.*/
+.container1 {
+    position:absolute;   
+    margin: 120px;
+    width: 750px;
+    height: 550px;
+    margin-top:120px;   
+    background-color: white;
+}
+
