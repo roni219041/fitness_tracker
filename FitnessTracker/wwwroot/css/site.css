@@ -574,6 +574,25 @@ tbody tr {
 
 /*today food markings*/
 tr.foodIsFromToday {
-    background-color: #A9D267
+    background-color: #A9D267 !important
 }
 
+/*food creation page stylization*/
+
+#startfoodpage {
+    /* The image used */
+    background-image: url(../images/IMG_8392.webp);
+    background-repeat: no-repeat;
+    /* Full height */
+    display: table;
+    height: 525px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-size: cover;
+}
+
+#selectstyling {
+    margin-left: -10px;
+    margin-top: 7px;
+    height: 50px;
+}

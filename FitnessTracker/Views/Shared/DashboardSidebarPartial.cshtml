@@ -1,9 +1,11 @@
 ﻿<div class="col-2 mycols">
     <h3 class="mb-5">Add activity</h3>
-    <div class="button regbtn" id="button-2">
-        <div id="slide"></div>
-        <div class="innerText"><i class="fas fa-utensils"></i> Food</div>
-    </div>
+    <a asp-controller="Food" asp-action="AddFood" style="text-decoration: none">
+        <div class="button regbtn" id="button-2">
+            <div id="slide"></div>
+            <div class="innerText"><i class="fas fa-utensils"></i> Food</div>
+        </div>
+    </a>
     <a asp-controller="Exercise" asp-action="CreateExercise" style="text-decoration: none">
         <div class="button regbtn" id="button-2">
             <div id="slide"></div>
