@@ -11,16 +11,15 @@
     <header>
         <partial name="NavbarPartial" />
     </header>
-    <div class="dashboard h-100 mb-5">
+    <div class="dashboard h-100 pb-0">
         <main id="main" role="main" class="mt-5 h-100">
             @RenderBody()
         </main>
     </div>
-<partial name="FooterPartial"/>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="https://kit.fontawesome.com/bbf4fa143d.js" crossorigin="anonymous"></script>
-@await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/bbf4fa143d.js" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
