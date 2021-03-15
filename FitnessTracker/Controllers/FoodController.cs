@@ -109,7 +109,7 @@ namespace FitnessTracker.Controllers
 
         public IActionResult CreateCustomFood(AddCustomFoodViewModel foodInputData)
         {
-
+            return View();
         }
     }
 }
