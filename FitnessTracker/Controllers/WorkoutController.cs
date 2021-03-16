@@ -16,9 +16,10 @@ namespace FitnessTracker.Controllers
         {
             _db = db;
         }
+
         public IActionResult WorkoutDetails()
         {
-            return View();
+            return View("WorkoutDetails");
         }
 
         public IActionResult CreateWorkout()
