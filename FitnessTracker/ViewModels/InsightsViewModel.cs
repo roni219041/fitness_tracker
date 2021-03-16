@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using FitnessTracker.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FitnessTracker.ViewModels
 {
     public class InsightsViewModel
     {
-        [Required] public string FirstName { get; set; }
-        [Required] public string LastName { get; set; }
-        [Required] public string Gender { get; set; }
-        [Required] public List<SelectListItem> PersonalFoods { get; set; }
+        [Required] public double? currentDailyCalories { get; set; }
 
-        //[Required] public double BMR = 
+        [Required] public double? RequiredCalories { get; set; }
+
+        [Required]
+        public double? RemainingCalories
+        {
+            get { return RequiredCalories - currentDailyCalories; }
+        }
+        public List<InsightWorkoutsViewModel> userWorkouts { get; set; }
     }
 }
