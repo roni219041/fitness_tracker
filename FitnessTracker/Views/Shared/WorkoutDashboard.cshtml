@@ -1,21 +1,35 @@
-﻿<div class="limiter">
+﻿<script type="text/javascript">
+    function RedirectToDetailsPage(event) {
+        var workoutname = event.currentTarget.children[0].innerHTML;
+        console.log(workoutname)
+        window.location.href = @Url.Action("WorkoutDetails", "Workout") + workoutname + "?"
+    }
+</script>
+<div class="limiter">
     <div class="wrap-table100">
         <div class="table100">
-            <table class="tableWorkouts">
-                <thead>
-                <tr class="table100-head">
-                    <th style="width: 60%">Name</th>
-                    <th style="width: 40%">Count of exercises</th>
-                </tr>
-                </thead>
-                @foreach (var workout in Model.userWorkouts)
-                {
-                    <tr class="backgroundColorWorkout">
-                        <td style="width: 60%">@workout.Name</td>
-                        <td style="width: 40%;">@workout.ExerciseCount</td>
+            @if (Model.userWorkouts.Count == 0)
+            {
+                <h3>You have not added any workouts!</h3>
+            }
+            else
+            {
+                <table class="tableWorkouts">
+                    <thead>
+                    <tr class="table100-head">
+                        <th style="width: 60%">Name</th>
+                        <th style="width: 40%">Count of exercises</th>
                     </tr>
-                }
-            </table>
+                    </thead>
+                    @foreach (var workout in Model.userWorkouts)
+                    {
+                        <tr onclick="RedirectToDetailsPage(event)" class="backgroundColorWorkout">
+                            <td style="width: 60%">@workout.Name</td>
+                            <td style="width: 40%;">@workout.ExerciseCount</td>
+                        </tr>
+                    }
+                </table>
+            }
         </div>
     </div>
 </div>
