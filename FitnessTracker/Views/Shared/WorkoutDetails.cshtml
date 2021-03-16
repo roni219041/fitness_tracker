@@ -1,26 +1,21 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Workout Details";
 }
-<div class="limiter">
-    <div class="wrap-table100">
-        <div class="table100">
-            <table class="tableWorkouts">
-                <thead>
-                    <tr class="table100-head">
-                        <th style="width: 60%">Name</th>
-                        <th style="width: 40%">Count of exercises</th>
-                        <th style="width: 20%">Details</th>
-                    </tr>
-                </thead>
-                @foreach (var workout in Model.userWorkouts)
-                {
-                    <tr class="backgroundColorWorkout">
-                        <td style="width: 60%">@workout.Name</td>
-                        <td style="width: 40%;">@workout.ExerciseCount</td>
-                        <td><button><a href="C:\Users\Vasil\Desktop\FitnessTracker1\FitnessTracker\Views\Shared\WorkoutDetails.cshtml">detail</a></button></td>
-                    </tr>
-                }
-            </table>
-        </div>
-    </div>
+<div>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var exercise in Model.Excersice)
+            {
+                <tr class="backgroundColorWorkout">
+                    <td style="width: 80%">@exercise.Name</td>                  
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
