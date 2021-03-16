@@ -596,3 +596,10 @@ tr.foodIsFromToday {
     margin-top: 7px;
     height: 50px;
 }
+
+.backgroundColorWorkout {
+    background-color: #DFE3EE !important;
+}
+    .backgroundColorWorkout:hover {
+        background-color: #E8DBCB !important
+    }
