@@ -188,16 +188,22 @@ img {
 .btn.homeToPage {
     background-color: black;
     color: white;
+    font-size: 20px;
     border: none;
     padding: 32px 16px;
     cursor: pointer;
     display: block;
     width: 100%;
-    opacity:0.9;
-    border-radius:5px;
+    opacity: 0.9;
+    border-radius: 5px;
+    font-family: Signpainter, serif;
 }
-.homePageBgr:hover{
-    opacity:1;
+.btn.homeToPage:hover{
+    background-image: url(/images/user1.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    color:transparent;
 }
 /*.btn.homeToLogin {
     background-color: white;
