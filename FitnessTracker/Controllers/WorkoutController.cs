@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FitnessTracker.Data;
 using FitnessTracker.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitnessTracker.Controllers
 {
@@ -16,10 +17,28 @@ namespace FitnessTracker.Controllers
         {
             _db = db;
         }
-
+        [HttpGet]
         public IActionResult WorkoutDetails()
         {
-            return View("WorkoutDetails");
+            string name = Request.Path.Value.Split('/').LastOrDefault();
+            var targetWorkout = _db.Workouts
+                .Include(w => w.Exercises)
+                .ThenInclude(e => e.Bodypart)
+                .Include(w => w.Exercises)
+                .ThenInclude(e => e.Category).FirstOrDefault(w => w.Name == name);
+            
+            WorkoutDetailsViewModel workout = new WorkoutDetailsViewModel()
+            {
+                Exercises = targetWorkout.Exercises.ToList(),
+                Name = targetWorkout.Name
+            };
+            //{
+            //    Name = w.Name,
+            //    Exercises = w.Exercises.ToList()
+            //}).FirstOrDefault(w => w.Name == name);
+
+
+            return View("WorkoutDetails", workout);
         }
 
         public IActionResult CreateWorkout()

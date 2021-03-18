@@ -23,6 +23,9 @@
     <div style="margin-left:10px">
         <div class="wrap-table100">
             <div class="table100">
+                <script type="text/javascript">
+                    
+                </script>
                 <table class="tableWorkouts">
                     <thead>
                         <tr class="table100-head">
@@ -32,10 +35,11 @@
                     </thead>
                     @foreach (var workout in Model.userWorkouts)
                     {
-                        <tr class="backgroundColorWorkout">
+                        <tr onclick="RedirectWorkoutDetails(event)" class="backgroundColorWorkout">
                             <td style="width: 60%">@workout.Name</td>
                             <td style="width: 40%;">@workout.ExerciseCount</td>
                         </tr>
+
                     }
                 </table>
             </div>

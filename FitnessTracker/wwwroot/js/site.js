@@ -27,3 +27,8 @@ function validatePasswordField() {
         alert("Password does not meet requirements! It should be at least 5 characters long and should contain at least one letter!");
     }
 }
+
+function RedirectWorkoutDetails(event) {
+    var currentWorkout = event.currentTarget.children[0].innerHTML
+    location.href = "../Workout/WorkoutDetails/" + currentWorkout + "?"
+}
